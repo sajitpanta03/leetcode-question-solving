@@ -32,6 +32,7 @@
 ## String
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0008-string-to-integer-atoi](https://github.com/sajitpanta03/leetcode-question-solving/tree/main/0008-string-to-integer-atoi/) | Medium |
 | [0049-group-anagrams](https://github.com/sajitpanta03/leetcode-question-solving/tree/main/0049-group-anagrams/) | Medium |
 | [0242-valid-anagram](https://github.com/sajitpanta03/leetcode-question-solving/tree/main/0242-valid-anagram/) | Easy |
 <!---LeetCode Topics End-->
