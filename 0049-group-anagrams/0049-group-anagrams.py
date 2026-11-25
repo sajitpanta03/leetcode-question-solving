@@ -1,34 +1,17 @@
 
 from typing import List
+from collections import defaultdict
 
 class Solution:
     def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
+        res = defaultdict(list)
 
-        groups = {}
+        for s in strs:
+            count = [0] * 26  # 26 lowercase English letters
 
-        for word in strs:
+            for c in s:
+                count[ord(c) - ord("a")] += 1
 
-            # Step 1: Create frequency hashmap
-            frequency = {}
+            res[tuple(count)].append(s)
 
-            # Step 2: Count each character
-            for char in word:
-
-                if char not in frequency:
-                    frequency[char] = 1
-                else:
-                    frequency[char] += 1
-
-            # Step 3: Sort character-frequency pairs
-            key = tuple(sorted(frequency.items()))
-
-            # Step 4: Check if the key exists
-            if key not in groups:
-                groups[key] = []
-
-            # Step 5: Add word to its group
-            groups[key].append(word)
-
-        # Step 6: Return grouped words
-        return list(groups.values())
-
+        return list(res.values())
